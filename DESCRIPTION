@@ -1,0 +1,19 @@
+Package: SDMutils
+Type: Package
+Title: Helper functions for SDM workflows
+Version: 0.1.0
+Author: Dominic Henry
+Maintainer: Dominic Henry <dominichenry@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    magrittr,
+    methods,
+    raster,
+    sf
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)
