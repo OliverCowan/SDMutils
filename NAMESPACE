@@ -2,6 +2,7 @@
 
 export("%>%")
 export(check_occ_range)
+export(plot_occ_spatial)
 export(plot_occ_temporal)
 importFrom(magrittr,"%>%")
 importFrom(methods,as)

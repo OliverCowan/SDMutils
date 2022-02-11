@@ -7,18 +7,18 @@
 plot_occ_temporal(data, ptheme)
 }
 \arguments{
-\item{data}{Simple Feature point object with species occurrence data}
+\item{data}{\code{sf} point object with species occurrence data}
 
 \item{ptheme}{ggplot theme}
 }
 \value{
-Temporal JPEG plots
+Temporal JPEG plots: 1) \verb{occ_frequency_date_1980_\{sppselect\}} and 2) \verb{occ_frequency_date_all_\{sppselect\}}.
 }
 \description{
 This function summarises occurrence data in a temporal context.
 }
 \details{
-The function draws two plots  showing occurrence record frequencies and writes them to the species directory.
+The function draws two plots showing occurrence record frequencies and writes them to the species directory.
 }
 \note{
 The size of the text and other elements of the plots can be change by customising the \code{theme} object.
