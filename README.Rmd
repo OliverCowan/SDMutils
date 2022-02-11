@@ -3,10 +3,10 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# SDMutils
+# SDMutils <img src="inst/sticker/sdmutils_hex.png" width="240px" align="right"/>
 
 This package provides a set of commonly used functions that are used to summarise occurrence records in both space and time, identify outliers, prepare data for SDM input, and write output files from the various SDM steps in a standardised format.
 
@@ -14,6 +14,10 @@ This package provides a set of commonly used functions that are used to summaris
 
 To install from GitHub using the [remotes](https://github.com/r-lib/remotes) package, run:
 
-```{r, eval=FALSE}
-remotes::install_github("DomHenry/SDMUtils")
+`remotes::install_github("DomHenry/SDMUtils")`
+
+## Functions currently available
+
+```{r}
+list.files("R")
 ```
