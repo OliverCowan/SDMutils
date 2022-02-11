@@ -17,3 +17,5 @@ Imports:
     sf
 RoxygenNote: 7.1.2
 Roxygen: list(markdown = TRUE)
+URL: https://github.com/DomHenry/SDMutils
+BugReports: https://github.com/DomHenry/SDMutils/issues
