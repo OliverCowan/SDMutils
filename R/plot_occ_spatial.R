@@ -45,7 +45,7 @@ plot_occ_spatial <- function(data, range, za, ptheme) {
     ptheme +
     ggplot2::ggtitle(glue::glue("{sppselect}"))
 
-  ggplot2::ggsave(glue::glue("{sdm_dir}/{sppselect}/occ_map_decadal{sppselect}.jpg"), plot = p2, height = 12, width = 16)
+  ggplot2::ggsave(glue::glue("{sdm_dir}/{sppselect}/occ_map_decadal_{sppselect}.jpg"), plot = p2, height = 12, width = 16)
 
   p3 <- ggplot2::ggplot() +
     ggplot2::geom_sf(data = za, fill = ggplot2::alpha("grey", 0.3), size = 0.5) +
