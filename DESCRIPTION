@@ -1,7 +1,7 @@
 Type: Package
 Package: SDMutils
 Title: Helper functions for an SDM workflow
-Version: 0.1.0.9004
+Version: 0.1.0.9005
 Author: Dominic Henry
 Maintainer: Dominic Henry <dominichenry@gmail.com>
 Description: This package provides a set of commonly used functions that
