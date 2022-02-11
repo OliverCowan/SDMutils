@@ -1,21 +1,25 @@
-Package: SDMutils
 Type: Package
-Title: Helper functions for SDM workflows
+Package: SDMutils
+Title: Helper functions for an SDM workflow
 Version: 0.1.0.9000
 Author: Dominic Henry
 Maintainer: Dominic Henry <dominichenry@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package provides a set of commonly used functions that are used to 
+    summarise occurrence records in both space and time, identify outliers, prepare data for SDM input,
+    and write output files from the various SDM steps in a standardised format.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+URL: https://github.com/DomHenry/SDMutils
+BugReports: https://github.com/DomHenry/SDMutils/issues
 Imports: 
     dplyr,
     magrittr,
     methods,
     raster,
     sf
-RoxygenNote: 7.1.2
+Suggests: 
+    spelling
+Encoding: UTF-8
+Language: en-US
+LazyData: true
 Roxygen: list(markdown = TRUE)
-URL: https://github.com/DomHenry/SDMutils
-BugReports: https://github.com/DomHenry/SDMutils/issues
+RoxygenNote: 7.1.2

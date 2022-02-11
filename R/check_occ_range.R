@@ -1,20 +1,20 @@
 #' Check which occurrence points fall outside of known range
-#' @description The known range can be either a IUCN range, hand-delineated expert polygon or QDS cells.
+#' @description The known range can be either a IUCN range, hand-delineated expert polygon or a QDS shapefile.
 #' @param range polygon defining the species range (can be an `sf` or `sp` object)
 #' @param occ_data an `sf` spatial data frame with occurrence points
-#' @note It's important to note a couple of things. The buffers are set at 5, 10, and 20 km
+#' @note If a point is located beyond the 20km buffer then all of `core`, `buff1`, `buff2`, and `buff3` will be given the value `FALSE`.
 #' @author Dominic Henry
-#' @details Explain what the function does
-#' @return The `occ_data` input with four columns added (core:buff3)
+#' @details The function creates three buffers around the range and identifies where a point is located based on the buffers (i.e., within the core range, or within a 5km, 10km, or 20km buffer). Four columns are added to the input data frame (`core`, `buff1`, `buff2`, and `buff3`) and are given a logical value depending on where the point is located (`TRUE` if the point is in the core or buffers, `FALSE` if it isn't).
+#' @return The `occ_data` input with four columns added (`core`, `buff1`, `buff2`, and `buff3`)
 #' @importFrom methods as
 #' @importFrom magrittr "%>%"
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' data <- check_occ_expert(range, occ_data)
+#' data <- check_occ_range(range, occ_data)
 #' }
-check_occ_expert <- function(range, occ_data) {
+check_occ_range <- function(range, occ_data) {
 
   # range <- st_union(range)
   # range <- sf::st_make_valid(range)
