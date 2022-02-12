@@ -1,5 +1,5 @@
 
-# SDMutils <img src="inst/sticker/sdmutils_hex.png" width="240px" align="right"/>
+# SDMutils <img src="inst/sticker/sdmutils_hex.png" width="180px" align="right"/>
 
 This package provides a set of commonly used functions that are used to
 summarise occurrence records in both space and time, identify outliers,
