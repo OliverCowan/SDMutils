@@ -15,5 +15,6 @@ To install from GitHub using the
 
 ## Functions currently available
 
-    ## [1] "check_occ_range.R"   "plot_occ_spatial.R"  "plot_occ_temporal.R"
-    ## [4] "utils-pipe.R"
+    ## [1] "check_occ_range.R"    "plot_occ_spatial.R"   "plot_occ_temporal.R" 
+    ## [4] "SDMutils-package.R"   "utils-pipe.R"         "write_bart_plots.R"  
+    ## [7] "write_bart_rasters.R"
