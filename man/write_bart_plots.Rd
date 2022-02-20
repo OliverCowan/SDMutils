@@ -33,6 +33,9 @@ This function writes plots using a combination of PDF and PNG outputs.
 \details{
 The function writes 8 plots related to the species SDM predictions, both probability and binary surfaces. The species' occurrence points have been overlaid on certain plots. Plots are written to the species directory.
 }
+\note{
+There are several undeclared variables to take note of: \code{BART_dir}, \code{tss_threshold}, \code{occ}, \code{num_occ_points}, and \code{occurence_points}
+}
 \examples{
 \dontrun{
 write_bart_plots(data = map, mean_theme = maptheme_mean, ci_theme = maptheme_ci)
