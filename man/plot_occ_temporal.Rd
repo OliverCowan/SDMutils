@@ -21,7 +21,7 @@ This function summarises occurrence data in a temporal context.
 The function draws two plots showing occurrence record frequencies and writes them to the species directory.
 }
 \note{
-The size of the text and other elements of the plots can be change by customising the \code{theme} object.
+The size of the text and other elements of the plots can be change by customising the \code{theme} object. Also take note of the undeclared variables: \code{sdm_dir}, \code{sppselect}, \code{year_date}, and \code{undated}.
 }
 \examples{
 \dontrun{

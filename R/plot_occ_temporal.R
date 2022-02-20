@@ -4,7 +4,7 @@
 #' @param ptheme ggplot theme
 #' @author Dominic Henry
 #' @details The function draws two plots showing occurrence record frequencies and writes them to the species directory.
-#' @note The size of the text and other elements of the plots can be change by customising the `theme` object.
+#' @note The size of the text and other elements of the plots can be change by customising the `theme` object. Also take note of the undeclared variables: `sdm_dir`, `sppselect`, `year_date`, and `undated`.
 #' @return Temporal JPEG plots: 1) `occ_frequency_date_1980_{sppselect}` and 2) `occ_frequency_date_all_{sppselect}`.
 #' @export
 #'
