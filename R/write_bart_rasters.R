@@ -4,6 +4,7 @@
 #' @param data a `RasterStack` object returned by `embarcadero::predict2.bart()`
 #' @author Dominic Henry
 #' @details The function write outputs of both binary and probability surfaces at mean values and 95% credible intervals.
+#' @note Undeclared variables: `BART_dir`, `sppselect` and `tss_threshold`
 #' @return Seven raster layers:
 #' \enumerate{
 #'  \item `SDM_prob_mean_{sppselect}`: Mean probability of habitat suitability
