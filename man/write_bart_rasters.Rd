@@ -28,6 +28,9 @@ This function writes GeoTIFFs of BART predictions.
 \details{
 The function write outputs of both binary and probability surfaces at mean values and 95\% credible intervals.
 }
+\note{
+Undeclared variables: \code{BART_dir}, \code{sppselect} and \code{tss_threshold}
+}
 \examples{
 \dontrun{
 write_bart_rasters(map)

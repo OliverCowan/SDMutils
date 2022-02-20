@@ -5,6 +5,7 @@
 #' @param ci_theme a `rasterTheme` used for plotting the posterior width (95% credible interval) SDM map
 #' @author Dominic Henry
 #' @details The function writes 8 plots related to the species SDM predictions, both probability and binary surfaces. The species' occurrence points have been overlaid on certain plots. Plots are written to the species directory.
+#' @note There are several undeclared variables to take note of: `BART_dir`, `tss_threshold`, `occ`, `num_occ_points`, and `occurence_points`
 #' @return The following plot files:
 #' \enumerate{
 #'  \item `SDM_mean_probability.pdf`
