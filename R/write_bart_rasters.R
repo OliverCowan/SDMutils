@@ -24,31 +24,31 @@
 #' }
 write_bart_rasters <- function(data){
 
-  raster::writeRaster(data[[1]],
+  terra::writeRaster(data[[1]],
                       glue::glue("{BART_dir}/SDM_prob_mean_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
-  raster::writeRaster(data[[2]],
+  terra::writeRaster(data[[2]],
                       glue::glue("{BART_dir}/SDM_prob_lower_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
-  raster::writeRaster(data[[3]],
+  terra::writeRaster(data[[3]],
                       glue::glue("{BART_dir}/SDM_prob_upper_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
-  raster::writeRaster(data[[1]] > tss_threshold,
+  terra::writeRaster(data[[1]] > tss_threshold,
                       glue::glue("{BART_dir}/SDM_bin_mean_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
-  raster::writeRaster(data[[2]] > tss_threshold,
+  terra::writeRaster(data[[2]] > tss_threshold,
                       glue::glue("{BART_dir}/SDM_bin_lower_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
-  raster::writeRaster(data[[3]] > tss_threshold,
+  terra::writeRaster(data[[3]] > tss_threshold,
                       glue::glue("{BART_dir}/SDM_bin_upper_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
-  raster::writeRaster(data[[3]]- data[[2]],
+  terra::writeRaster(data[[3]]- data[[2]],
                       glue::glue("{BART_dir}/SDM_cred_int_width_{sppselect}.tif"),
                       format = "GTiff",overwrite = TRUE)
 
