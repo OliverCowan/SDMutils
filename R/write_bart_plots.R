@@ -38,12 +38,12 @@ write_bart_plots <- function(data, mean_theme, ci_theme) {
 
   p1 <- p +
     latticeExtra::layer(sp::sp.points(occurence_points, pch = 20, col = "black", cex = 0.8),
-                        data = list(occurence_points = sp::SpatialPoints(occ[1:num_occ_points, ]))
+                        data = list(occurence_points = terra::points(points(occ[1:num_occ_points, ])))
     )
 
   p2 <- p +
     latticeExtra::layer(sp::sp.points(occurence_points, pch = 20, col = "black", cex = 4),
-                        data = list(occurence_points = sp::SpatialPoints(occ[1:num_occ_points, ]))
+                        data = list(occurence_points = terra::points(points(occ[1:num_occ_points, ])))
     )
 
   pdf(glue::glue("{BART_dir}/SDM_mean_probability.pdf"), width = 16, height = 9)
@@ -102,19 +102,19 @@ write_bart_plots <- function(data, mean_theme, ci_theme) {
   pdf(glue::glue("{BART_dir}/SDM_four_panel_probability.pdf"), width = 16, height = 9)
   par(mfrow = c(2, 2))
   par(mar = c(2, 1, 2, 5))
-  raster::plot(data[[1]],
+  terra::plot(data[[1]],
                main = "Posterior mean",
                box = F, axes = F
   )
-  raster::plot(data[[2]],
+  terra::plot(data[[2]],
                main = "Lower 95% CI bound",
                box = F, axes = F
   )
-  raster::plot(data[[3]],
+  terra::plot(data[[3]],
                main = "Upper 95% CI bound",
                box = F, axes = F
   )
-  raster::plot(data[[3]] - data[[2]],
+  terra::plot(data[[3]] - data[[2]],
                main = "Credible interval width",
                box = F, axes = F
   )
@@ -123,15 +123,15 @@ write_bart_plots <- function(data, mean_theme, ci_theme) {
   ## Binary predictions
   pdf(glue::glue("{BART_dir}/SDM_four_panel_binary.pdf"), width = 16, height = 9)
   par(mfrow = c(2, 2))
-  raster::plot(data[[1]] > tss_threshold,
+  terra::plot(data[[1]] > tss_threshold,
                main = "Posterior mean",
                box = F, axes = F
   )
-  raster::plot(data[[2]] > tss_threshold,
+  terra::plot(data[[2]] > tss_threshold,
                main = "Lower 95% CI bound",
                box = F, axes = F
   )
-  raster::plot(data[[3]] > tss_threshold,
+  terra::plot(data[[3]] > tss_threshold,
                main = "Upper 95% CI bound",
                box = F, axes = F
   )
@@ -139,7 +139,7 @@ write_bart_plots <- function(data, mean_theme, ci_theme) {
                            0.75,
                            na.rm = TRUE
   )
-  raster::plot((data[[3]] - data[[2]]) > quant,
+  terra::plot((data[[3]] - data[[2]]) > quant,
                box = FALSE,
                axes = FALSE,
                main = "Highest uncertainty zones",
@@ -152,7 +152,7 @@ write_bart_plots <- function(data, mean_theme, ci_theme) {
   ## Mean binary
   pdf(glue::glue("{BART_dir}/SDM_mean_binary.pdf"), width = 16, height = 9)
   par(mfrow = c(1, 1))
-  raster::plot(data[[1]] > tss_threshold,
+  terra::plot(data[[1]] > tss_threshold,
                main = "Predicted presence",
                box = F, axes = F
   )
@@ -161,7 +161,7 @@ write_bart_plots <- function(data, mean_theme, ci_theme) {
 
   grDevices::png(glue::glue("{BART_dir}/SDM_mean_binary.png"), width = 2800, height = 2000)
   par(mfrow = c(1, 1))
-  raster::plot(data[[1]] > tss_threshold,
+  terra::plot(data[[1]] > tss_threshold,
                main = "Predicted presence",
                box = F, axes = F
   )
