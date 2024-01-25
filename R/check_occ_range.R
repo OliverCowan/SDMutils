@@ -17,9 +17,9 @@
 check_occ_range <- function(range, occ_data) {
 
   range <- as(range, "Spatial")
-  buff1 <- raster::buffer(range, width = 0.05)
-  buff2 <- raster::buffer(range, width = 0.1)
-  buff3 <- raster::buffer(range, width = 0.2)
+  buff1 <- terra::buffer(range, width = 0.05)
+  buff2 <- terra::buffer(range, width = 0.1)
+  buff3 <- terra::buffer(range, width = 0.2)
 
   b1 <- buff1 - range
   b2 <- buff2 - buff1
